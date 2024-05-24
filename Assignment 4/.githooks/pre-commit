@@ -1,0 +1,10 @@
+#!/bin/bash
+
+python test.py
+
+if [ $? -eq 0 ]; then
+    echo "Tests passed, commit allowed."
+else
+    echo "Tests failed, commit not halted."
+    exit 1
+fi
